@@ -6,8 +6,6 @@ import numpy as np
 import sklearn
 import streamlit
 
-streamlit run Website.py --server.port 6000
-
 app=Flask(__name__)
 cors=CORS(app)
 model=pickle.load(open('LinearRegressionModel.pkl','rb'))
