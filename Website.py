@@ -23,4 +23,4 @@ kms_driven = st.number_input('kms_driven')
 if st.button('Predict'):
     prediction=model.predict(pd.DataFrame(columns=['name', 'company', 'year', 'kms_driven', 'fuel_type'], 
                                           data=np.array([car_model,car_company,car_year,kms_driven,car_fuel_type]).reshape(1, 5)))
-    st.text("Rs. "+str(int(prediction[0])))
+    st.text("The car may be sold fo approximately Rs. "+str(int(prediction[0])))
